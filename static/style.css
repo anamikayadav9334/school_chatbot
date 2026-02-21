@@ -1,0 +1,208 @@
+/* ============================= */
+/* FULL SCREEN BACKGROUND VIDEO */
+/* ============================= */
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none; /* Prevents video from blocking chat clicks */
+}
+.sub {
+  margin-top: 30%;
+  text-align: center;
+  font-size: 50px;
+  color: rgba(38, 32, 187, 0.661);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* start */
+/* Navbar container */
+.navbar {
+  width: 100%;
+  background-color: #1e40afbe; /* Blue shade */
+  position: fixed; /* stick to top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+}
+
+/* Menu list */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 20px;
+  height: 40px;
+}
+
+/* Menu items */
+.nav-menu > li {
+  position: relative;
+}
+
+.nav-menu a {
+  display: block;
+  padding: 20px 15px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.nav-menu a:hover {
+  background-color: #2564ebed; /* lighter blue */
+  cursor: pointer;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #1e40af98;
+  min-width: 180px;
+  list-style: none;
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+}
+
+.dropdown-menu li a {
+  padding: 12px 15px;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Optional: add small arrow */
+.dropdown > a::after {
+  content: " ▼";
+  font-size: 10px;
+}
+
+/* For responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    height: auto;
+  }
+  .dropdown-menu {
+    position: static;
+  }
+}
+/* end */
+
+/* ============================= */
+/* BODY */
+/* ============================= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* ============================= */
+/* CHAT BUTTON */
+/* ============================= */
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4e73df;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 20;
+}
+
+/* ============================= */
+/* CHAT CONTAINER */
+/* ============================= */
+.chat-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+/* CHAT HEADER */
+
+.chat-header {
+  background: #4e73df;
+  color: rgb(237, 242, 237);
+  padding: 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* CHAT MESSAGES */
+
+.chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CHAT INPUT */
+/* ============================= */
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.chat-input button {
+  padding: 10px;
+  background: #4e73df;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* MESSAGE STYLES */
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.user {
+  background: #4e73df;
+  color: white;
+  align-self: flex-end;
+}
+
+.bot {
+  background: #f1f1f1;
+  color: black;
+  align-self: flex-start;
+}

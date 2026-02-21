@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Greenfield School AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+   <h1 class="sub">Welcome to<b> Greenfield School AI Assistant</b></h1>
+
+   <!-- add header -->
+
+<!-- Top Navbar -->
+  <nav class="navbar">
+    <ul class="nav-menu">
+      <li><a href="/">Home</a></li>
+
+      <li class="dropdown">
+        <a href="#">Courses</a>
+        <ul class="dropdown-menu">
+          <li><a href="/courses/python">Python</a></li>
+          <li><a href="/courses/ml">Machine Learning</a></li>
+          <li><a href="/courses/webdev">Web Development</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Events & Projects</a>
+        <ul class="dropdown-menu">
+          <li><a href="/events/hackathon">Hackathon</a></li>
+          <li><a href="/events/workshop">Workshop</a></li>
+          <li><a href="/projects/sciencefair">Science Fair</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/contacts">Contacts</a></li>
+      <li><a href="/admissions">Admissions</a></li>
+    </ul>
+  </nav>
+
+<!-- end of header -->
+
+
+
+
+    <video autoplay muted loop playsinline  id="bgVideo">
+    <source src="/static/vedio-2.mp4" type="video/mp4">
+</video>
+
+
+<div class="chat-button" onclick="toggleChat()">💬</div>
+
+<div class="chat-container" id="chatBox">
+    <div class="chat-header">
+        Greenfield School Assistant
+        <span onclick="toggleChat()">✖</span>
+    </div>
+    <div class="chat-messages" id="messages"></div>
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Ask something..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
+
