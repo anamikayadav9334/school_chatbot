@@ -176,7 +176,7 @@ LLM_MODEL=phi3   # swap to llama3, mistral, gemma, etc.
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:48CAE4,100:6C63FF&height=100&section=footer" width="100%" />
 
-**Made with ❤️ by [Anamika Yadav](https://github.com/anamikayadav9334)**
+**Made  by [Anamika Yadav](https://github.com/anamikayadav9334)**
 
 
 
